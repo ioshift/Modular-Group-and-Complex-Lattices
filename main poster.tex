@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Imperial College London Poster (Landscape)
+% LaTeX Template
+% Version 1.0 (February 22, 2024)
+%
+% For current versions and to report
+% issues, please see:
+% https://github.com/ImperialCollegeLondon/imperial_latex_templates
+%
+%!TEX program = xelatex
+% Note: this template must be compiled with XeLaTeX rather than PDFLaTeX
+% due to the custom fonts used. The line above should ensure this happens
+% automatically, but if it doesn't, your LaTeX editor should have a simple toggle
+% to switch to using XeLaTeX.
+%
+% © Imperial College London, 2024. This template, including logo and fonts, is 
+% for use of Imperial staff and students only for university business. All rights 
+% reserved to the copyright owners.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	CLASS, PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	landscape, % Landscape page orientation
+	%print, % Uncomment to convert colors to CMYK for printing purposes
+	%a1papersize, % Uncomment to use an A1 paper size instead of the default A0 paper size
+]{ImperialPoster}
+
+\input{head}
+%----------------------------------------------------------------------------------------
+%	POSTER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\postertitle{\LARGE On the connection between the action of $\operatorname{PSL}(2,\Z)$ on $\H$ and the classification of lattices $\Lambda\subset\C$} % The poster title, can be split across multiple lines manually with \\
+
+% Contributor/author names, can be split across multiple lines manually with \\
+% % Add affiliations using the \affiliation{} command
+% \posterauthors{Name of contributor\affiliation{1, 2},\\ Name of contributor\affiliation{1},\\ Name of contributor\affiliation{3}}
+
+% Command to output coauthor logos to the right of the Imperial logo in the header of the poster
+% % If no coauthor logos are required, remove or comment out this command
+% \coauthorlogos{
+% 	\coauthorlogo[4cm]{Grey_16-9.pdf} % Use the optional parameter to specify a height for the logo
+% 	\coauthorlogo[4cm]{Grey_16-9.pdf} % Use the optional parameter to specify a height for the logo
+% 	\coauthorlogo{Grey_16-9.pdf} % Not specifying the optional parameter will make the logo the same height as the Imperial logo
+% }
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE POSTER LAYOUT 1
+%----------------------------------------------------------------------------------------
+
+\titlesection % Output the title section, automatically populated using the information in the POSTER INFORMATION block above
+
+\medskip % Vertical whitespace
+
+
+\begin{multicols}{4}
+
+    \input{psl}
+        
+    % \columnbreak
+
+    \input{lattice}
+    
+	% \columnbreak
+
+    \input{homothety}
+
+    % \columnbreak
+
+    \input{normalization}
+
+    \input{j-inv}
+
+    \input{summary}
+    
+    \input{bib}
+    
+\end{multicols}
+
+\end{document}

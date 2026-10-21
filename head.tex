@@ -1,0 +1,123 @@
+% package
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{hyphenat}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{color}
+% \usepackage[colorlinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{flafter}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{mathalfa}
+\usepackage{mathdots}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+% \usepackage{microtype}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{pdflscape}
+\usepackage{pgffor}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\usepackage{xparse}
+\usepackage{xpatch}
+\usepackage[all]{xy}
+\usepackage{imakeidx}
+\usepackage[most]{tcolorbox}
+
+% --- Custom Color Definitions ---
+% These closely match the green tones in your image
+\definecolor{posterBorderGreen}{RGB}{91, 131, 80}      % Darker green for borders and text
+\definecolor{posterHeaderBg}{RGB}{216, 235, 200}     % Light green background for the header
+
+% --- Custom Environment Definition ---
+\newtcolorbox{hyperbolicbox}[1]{
+    enhanced,
+    colback=white,                           % White body background
+    colframe=posterBorderGreen,              % Outer container border color
+    boxrule=3pt,                             % Border line thickness
+    arc=6pt,                                 % Rounded corner radius
+    boxsep=10pt,                             % Padding inside the main container
+    top=5pt, bottom=10pt, left=10pt, right=10pt,
+    halign=flush left,
+    breakable,
+    % This handles the embedded, full-width header block at the top
+    before upper={
+        \begin{tcolorbox}[
+            colback=posterHeaderBg,
+            colframe=posterBorderGreen,
+            boxrule=1.5pt,
+            arc=4pt,
+            width=\linewidth,
+            top=8pt, bottom=8pt, left=10pt, right=10pt,
+        ]
+        \centering{\color{posterBorderGreen}\sffamily\bfseries\large #1}
+        \end{tcolorbox}
+    }
+}
+
+
+
+
+\theoremstyle{definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{defi}[thm]{Definition}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\F}{\mathbb{F}}
+
+\newcommand{\topo}{\mathcal{T}}
+\newcommand{\B}{\mathcal{B}}
+\renewcommand{\S}{\mathcal{S}}
+% Symbols
+\newcommand{\noteq}{\not=}
+\newcommand{\re}{\mathrm{Re\,}}
+\newcommand{\im}{\mathrm{Im\,}}
+\newcommand{\nexist}{\not\!\exists\,}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\floor}[1]{\left\lfloor #1\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1\right\rceil}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\closure}[2][3]{%
+{}\mkern#1mu\overline{\mkern-#1mu#2}}
+\newcommand{\interior}{\mathrm{Int\,}}
+\newcommand{\upint}{\mathchoice%
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\newcommand{\lowint}{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu%
+\int}
+\newcommand{\aand}{\quad\text{and}\quad}
+\newcommand{\res}[1]{\!\mid_{#1}}
+\newcommand{\normal}{\unlhd}
+\newcommand{\group}[1]{\langle#1\rangle}
+\renewcommand{\tt}[1]{\quad\text{#1}\quad}
+\renewcommand{\d}{\mathop{}\!\mathrm{d}} 
+\renewcommand{\emptyset}{\varnothing}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Bd}{Bd}

@@ -1,0 +1,39 @@
+\begin{hyperbolicbox}{Normalization of lattices}
+    \small
+    \begin{defi}
+        Since we only care about $\Lambda$ up to homothety, for a lattice $\group{p,q}$ with $\tau=\frac{p}{q}\in\H$, we can normalize it to a homothetic lattice $\Lambda_{\tau}=\group{\tau,1}=\frac{1}{q}\group{p,q}$. \cite{silvermanAT} 
+    \end{defi}
+    
+    However, there might also be homothetic normalized lattices such as $\group{i,1}=\group{i+1,1}$. We identify them using the following theorem.
+
+    \begin{thm}
+        Let $\tau,\tau'\in\H$. $\Lambda_\tau$ and $\Lambda_{\tau'}$ are homothetic if and only if $\tau$ and $\tau'$ are related with a M\"obius map $\tau'=\frac{a\tau+b}{c\tau+d}$ where $\begin{pmatrix}
+            a&b\\c&d
+        \end{pmatrix}\in\operatorname{PSL}(2,\Z)$.
+    \end{thm}
+    \begin{proof}
+        By definition, $\Lambda_\tau$ and $\Lambda_{\tau'}$ are homothetic if and only if there is $z\in\C\setminus\set{0}$ such that $\Lambda_{\tau'}=z\Lambda_\tau$, which is equivalent to
+        $$
+        \group{\tau',1}=\group{z\tau,z}
+        $$
+        which by \hyperref[thm5]{Theorem 5} holds if and only if there is $\begin{pmatrix}
+            a&b\\c&d
+        \end{pmatrix}\in\operatorname{SL}(2,\Z)$ such that
+        $$
+        \begin{pmatrix}
+            \tau'\\1
+        \end{pmatrix}=\begin{pmatrix}
+            a&b\\c&d
+        \end{pmatrix}\begin{pmatrix}
+            z\tau\\z
+        \end{pmatrix}\iff \tau'=\frac{a\tau+b}{c\tau+d}
+        $$
+    \end{proof}
+
+    This theorem points out the relationship between the action of $\operatorname{PSL}(2,\Z)$ on $\H$ and the classification of $\Lambda\subset\C$.
+    
+    Specifically, if we use $\mathcal{L}$ to denote the set of all lattices in $\C$, and define an equivalence relation $\sim$ on $L$ by $\Lambda\sim\Lambda'$ if and only if $\Lambda$ and $\Lambda'$ are homothetic, then there is a bijection from $\H/\operatorname{PSL}(2,\Z)$ to $\mathcal{L}/\sim$ given by
+    $$
+        f:\tau\mapsto\Lambda_\tau
+    $$
+\end{hyperbolicbox}
